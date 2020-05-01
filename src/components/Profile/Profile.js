@@ -29,7 +29,7 @@ class Profile extends React.Component {
 
     componentDidMount() {
         const username = this.props.match.params.username;
-        Axios.get(`http://tunepal.pythonanywhere.com/account/get_user_info/?username=${username}`)
+        Axios.get(`http://localhost:8000/account/get_user_info/?username=${username}`)
         .then(res => {
             const {
                 user_avatar: imgURL,

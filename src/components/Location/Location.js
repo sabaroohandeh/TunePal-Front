@@ -89,7 +89,7 @@ class Location extends React.Component {
                 'Authorization': `Token ${localStorage.getItem('token')}`
                 }
             };
-            axios.post('http://tunepal.pythonanywhere.com/account/get_location/', jsonLocation, sendLocationConfig)
+            axios.post('http://localhost:8000/account/get_location/', jsonLocation, sendLocationConfig)
             .then(res => {
                 this.setState(() => {
                     return {

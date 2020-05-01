@@ -83,7 +83,7 @@ class Homepage extends React.Component {
     }
 
     componentDidMount() {
-        Axios.get("http://tunepal.pythonanywhere.com/spotify/friend_list/", tokenConfig())
+        Axios.get("http://localhost:8000/spotify/friend_list/", tokenConfig())
         .then(res => {
             this.setState(prevState => {
                 return {
@@ -100,7 +100,7 @@ class Homepage extends React.Component {
             });
         });
 
-        Axios.get(`http://tunepal.pythonanywhere.com/spotify/topartist/`, tokenConfig())
+        Axios.get(`http://localhost:8000/spotify/topartist/`, tokenConfig())
         .then(res => {
             res.data.forEach(item => {
                 const temp = {
@@ -131,7 +131,7 @@ class Homepage extends React.Component {
             });
         });
 
-        Axios.get(`http://tunepal.pythonanywhere.com/spotify/topsong/`, tokenConfig())
+        Axios.get(`http://localhost:8000/spotify/topsong/`, tokenConfig())
         .then(res => {
             res.data.forEach(item => {
                 const temp = {

@@ -86,7 +86,7 @@ class Setting extends React.Component {
     }
 
     getUserInfo = () => {
-        Axios.get('http://tunepal.pythonanywhere.com/account/get_user_info/', tokenConfig())
+        Axios.get('http://localhost:8000/account/get_user_info/', tokenConfig())
         .then(res => {
             const {
                 user_avatar: imgURL,

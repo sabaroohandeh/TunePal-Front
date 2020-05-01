@@ -51,7 +51,7 @@ class Sidebar extends React.Component {
     }
 
     logout = () => {
-        Axios.get('http://tunepal.pythonanywhere.com/account/logout/', tokenConfig())
+        Axios.get('http://localhost:8000/account/logout/', tokenConfig())
         .then(res => {
             localStorage.clear();
             window.location.reload(false);

@@ -173,7 +173,7 @@ class Location extends React.Component {
             neighbourhood: this.state.neighbourhood
         };
         const toBackJSON = JSON.stringify(location);
-        Axios.post('http://tunepal.pythonanywhere.com/account/get_location/', toBackJSON, tokenConfig())
+        Axios.post('http://localhost:8000account/get_location/', toBackJSON, tokenConfig())
         .then(res => {
             this.setState(prevState => {
                 return {

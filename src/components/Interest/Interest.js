@@ -168,7 +168,7 @@ class Interest extends React.Component {
             }
         };
         const JsonToBackInerest = JSON.stringify(objInt);
-        axios.put('http://tunepal.pythonanywhere.com/account/sign_up/',JsonToBackInerest, config)
+        axios.put('http://localhost:8000/account/sign_up/',JsonToBackInerest, config)
         .then((response)=>{
             console.log(response)
             this.setState(() => {

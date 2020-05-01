@@ -56,7 +56,7 @@ class RequestItem extends React.Component {
     }
 
     onClickAccept = () => {
-        Axios.get(`http://tunepal.pythonanywhere.com/spotify/response/?verb=accept&username=${this.props.username}`, tokenConfig())
+        Axios.get(`http://localhost:8000/spotify/response/?verb=accept&username=${this.props.username}`, tokenConfig())
         .then(res => {
             console.log(res);
             this.props.updateItems(this.props.username);
@@ -67,7 +67,7 @@ class RequestItem extends React.Component {
     }
 
     onClickReject = () => {
-        Axios.get(`http://tunepal.pythonanywhere.com/spotify/response/?verb=decline&username=${this.props.username}`, tokenConfig())
+        Axios.get(`http://localhost:8000/spotify/response/?verb=decline&username=${this.props.username}`, tokenConfig())
         .then(res => {
             console.log(res);
             this.props.updateItems(this.props.username);

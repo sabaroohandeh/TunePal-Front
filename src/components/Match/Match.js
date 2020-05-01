@@ -26,7 +26,7 @@ class Match extends React.Component {
   };
 
   componentDidMount() {
-    Axios.get("http://tunepal.pythonanywhere.com/spotify/suggestions/", tokenConfig())
+    Axios.get("http://localhost:8000/spotify/suggestions/", tokenConfig())
     .then(res => {
       console.log(res);
       this.setState(prevState => {

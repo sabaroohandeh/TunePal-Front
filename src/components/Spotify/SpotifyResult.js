@@ -10,7 +10,7 @@ class SpotifyResult extends React.Component {
     }
     componentDidMount() {
         const code = window.location.href.split("spotifyresult/")[1];
-        const serverURL = `http://tunepal.pythonanywhere.com/spotify/get_url/${code}`;
+        const serverURL = `http://localhost:8000/spotify/get_url/${code}`;
         const config = {
             headers: {
             'Content-Type': 'application/json',

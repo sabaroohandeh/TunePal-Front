@@ -39,7 +39,7 @@ class Spotify extends React.Component {
     }
 
     onClick = () => {
-        Axios.get('http://tunepal.pythonanywhere.com/spotify/auth/', tokenConfig())
+        Axios.get('http://localhost:8000/spotify/auth/', tokenConfig())
         .then(res => {
             window.open(res.data.spotifyurl, '_blank', "width=600,height=600");
         })

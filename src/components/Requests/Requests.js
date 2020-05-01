@@ -20,7 +20,7 @@ class Requests extends React.Component {
     }
 
     componentDidMount() {
-      Axios.get("http://tunepal.pythonanywhere.com/spotify/friend_list/", tokenConfig())
+      Axios.get("http://localhost:8000/spotify/friend_list/", tokenConfig())
       .then(res => {
         console.log(res);
         this.setState(prevState => {

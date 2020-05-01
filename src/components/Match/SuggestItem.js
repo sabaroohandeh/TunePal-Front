@@ -46,7 +46,7 @@ class SuggestItem extends React.Component {
   }
 
   onClickRequest = () => {
-    Axios.get(`http://tunepal.pythonanywhere.com/spotify/friend_request/?username=${this.props.username}`, tokenConfig())
+    Axios.get(`http://localhost:8000/spotify/friend_request/?username=${this.props.username}`, tokenConfig())
     .then(res => {
       console.log(res);
       this.props.updatePending(this.props.username);

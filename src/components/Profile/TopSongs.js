@@ -9,7 +9,7 @@ class TopSongs extends React.Component {
         items: []
     }
     componentDidMount() {
-        Axios.get(`http://tunepal.pythonanywhere.com/spotify/topsong/?username=${this.props.username}`)
+        Axios.get(`http://localhost:8000/spotify/topsong/?username=${this.props.username}`)
         .then(res => {
             res.data.forEach(item => {
                 const temp = {

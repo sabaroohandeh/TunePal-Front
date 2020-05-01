@@ -271,7 +271,7 @@ class General extends React.Component {
                 showResult: false
             };
         });
-        Axios.put('http://tunepal.pythonanywhere.com/account/sign_up/', toBackJSON, tokenConfig())
+        Axios.put('http://localhost:8000/account/sign_up/', toBackJSON, tokenConfig())
         .then(res => {
             this.setState(prevState => {
                 return {

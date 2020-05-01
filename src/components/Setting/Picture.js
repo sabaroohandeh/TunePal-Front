@@ -140,7 +140,7 @@ class Picture extends React.Component {
                         showResult: false
                     };
                 });
-                Axios.put("http://tunepal.pythonanywhere.com/account/sign_up/", formData, tokenConfig())
+                Axios.put("http://localhost:8000/account/sign_up/", formData, tokenConfig())
                 .then(res => {
                     this.setState(prevState => {
                         return {

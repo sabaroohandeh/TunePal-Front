@@ -34,7 +34,7 @@ class Main extends React.Component {
 
     componentDidMount() {
         if (localStorage.getItem('token')) {
-            Axios.get('http://tunepal.pythonanywhere.com/account/get_user_info/', tokenConfig())
+            Axios.get('http://localhost:8000/account/get_user_info/', tokenConfig())
             .then(res => {
                 this.setState(prevState => {
                     return {
